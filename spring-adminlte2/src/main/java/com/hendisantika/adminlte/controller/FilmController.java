@@ -82,7 +82,7 @@ public class FilmController {
 	 * "Film " + save + " ajouté avec succès"); return "redirect:/film"; }
 	 */
     
-    //  vous pouvez trouver deux methode save la methode au dessus permet l'eregistrment d'une photo mais il est n'est pas mentionne dans le modele relationnel
+    // vous pouvez trouver deux methode save la methode au dessus permet l'eregistrment d'une photo mais il est n'est pas mentionne dans le modele relationnel
     @PostMapping(value = "/save")
     public String save(Film film, final RedirectAttributes ra) {
 
