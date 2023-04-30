@@ -9,6 +9,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Optional;
 
 public abstract class AbstractService<T extends AbstractModel<Long>, Long extends Serializable> {
@@ -43,6 +44,11 @@ public abstract class AbstractService<T extends AbstractModel<Long>, Long extend
         Optional<T> getEntityOpt = getRepository().findById(entity.getId());
         T getEntity = getEntityOpt.get();
         getRepository().save(entity);
+    }
+    
+    public List<T> getListAll() {
+    	
+    	return getRepository().findAll();
     }
 
 }
